@@ -13,18 +13,28 @@ public:
         
         vector<vector<int>> ans(max_freq);       
         
-        int idx_track=0;
-        for (int kk=0; kk<nums.size(); kk++)
+        for (auto x: hash_map)
         {
-            for (int jj=0; jj<max_freq; jj++)
+            int number = x.first;
+            int freq = x.second;
+            for (int ii=0; ii<freq;ii++)
             {
-                if (std::find(ans[jj].begin(), ans[jj].end(), nums[kk]) == ans[jj].end())
-                {
-                    ans[jj].push_back(nums[kk]);
-                    break;
-                }
+                ans[ii].push_back(number);
             }
-        }           
+        }
+        
+        // int idx_track=0;
+        // for (int kk=0; kk<nums.size(); kk++)
+        // {
+        //     for (int jj=0; jj<max_freq; jj++)
+        //     {
+        //         if (std::find(ans[jj].begin(), ans[jj].end(), nums[kk]) == ans[jj].end())
+        //         {
+        //             ans[jj].push_back(nums[kk]);
+        //             break;
+        //         }
+        //     }
+        // }           
         return ans;
     }
 };
