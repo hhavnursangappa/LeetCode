@@ -13,16 +13,6 @@ public:
         
         vector<vector<int>> ans(max_freq);       
         
-        // for (auto x: hash_map)
-        // {
-        //     int number = x.first;
-        //     int freq = x.second;
-        //     for (int ii=0; ii<freq;ii++)
-        //     {
-        //         ans[ii].push_back(number);
-        //     }
-        // }
-        
         for (int kk=0; kk<nums.size(); kk++)
         {
             for (int jj=0; jj<max_freq; jj++)
